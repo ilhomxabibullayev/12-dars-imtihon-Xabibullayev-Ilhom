@@ -1,86 +1,283 @@
+// 1 masala
+
+function findAverage(params) {
+    if (params.length === 0) return 0;
+
+    const sum = params.reduce((acc, num) => acc + num, 0);
+    return sum / params.length;
+}
+
+const numbers = [1];
+console.log(findAverage(numbers));
+
+function findAverage(params) {
+    if (params.length === 0) return 0;
+
+    const sum = params.reduce((acc, num) => acc + num, 0);
+    return sum / params.length;
+}
+
+const number = [1, 3, 5, 7];
+console.log(findAverage(number));
+
+// 4 masala
+
+function findFirstNonConsecutive(params) {
+    for (let i = 1; i < params.length; i++) {
+        if (params[i] !== params[i - 1] + 1) {
+            return params[i];
+        }
+    }
+    return null;
+}
+
+const num = [1, 2, 3, 4, 6, 7, 8];
+console.log(findFirstNonConsecutive(num));
+
+function findFirstNonConsecutive(params) {
+    for (let i = 1; i < params.length; i++) {
+        if (params[i] !== params[i - 1] + 1) {
+            return params[i];
+        }
+    }
+    return null;
+}
+
+const num2 = [1, 2, 3, 4];
+console.log(findFirstNonConsecutive(num2));
+
+// 5 masala
+
+function findOddCountNumber(params) {
+    const count = {};
+
+    for (let num of params) {
+        count[num] = (count[num] || 0) + 1;
+    }
+
+    for (let num in count) {
+        if (count[num] % 2 !== 0) {
+            return num;
+        }
+    }
+    return null;
+}
+
+const numbers2 = [7];
+console.log(findOddCountNumber(numbers2));
+
+function findOddCountNumber(params) {
+    const count = {};
+
+    for (let num of params) {
+        count[num] = (count[num] || 0) + 1;
+    }
+
+    for (let num in count) {
+        if (count[num] % 2 !== 0) {
+            return num;
+        }
+    }
+    return null;
+}
+
+const numbers3 = [0];
+console.log(findOddCountNumber(numbers3));
+
+function findOddCountNumber(params) {
+    const count = {};
+
+    for (let num of params) {
+        count[num] = (count[num] || 0) + 1;
+    }
+
+    for (let num in count) {
+        if (count[num] % 2 !== 0) {
+            return num;
+        }
+    }
+    return null;
+}
+
+const numbers4 = [1, 1, 2];
+console.log(findOddCountNumber(numbers4));
+
+function findOddCountNumber(params) {
+    const count = {};
+
+    for (let num of params) {
+        count[num] = (count[num] || 0) + 1;
+    }
+
+    for (let num in count) {
+        if (count[num] % 2 !== 0) {
+            return num;
+        }
+    }
+    return null;
+}
+
+const numbers5 = [0, 1, 0, 1, 0];
+console.log(findOddCountNumber(numbers5));
+
+function findOddCountNumber(params) {
+    const count = {};
+
+    for (let num of params) {
+        count[num] = (count[num] || 0) + 1;
+    }
+
+    for (let num in count) {
+        if (count[num] % 2 !== 0) {
+            return num;
+        }
+    }
+    return null;
+}
+
+const numbers6 = [1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1,];
+console.log(findOddCountNumber(numbers6));
+
 // 6 masala
 
-let findsmallesting = [78, 56, 232, 12, 8];
-
-let max = findsmallesting[0];
-
-let min = findsmallesting[0];
-
-for (let i = 0; i < findsmallesting.length; i++) {
-    if (findsmallesting[i] > max) {
-        max = findsmallesting
+function findMinNumber(params) {
+    if (params.length === 0) {
+        return null;
     }
-    else if (findsmallesting[i] < min) {
-        min = findsmallesting[i]
+
+    let min = arr[0];
+
+    for (let i = 1; i < params.length; i++) {
+        if (params[i] < min) {
+            min = params[i];
+        }
     }
+
+    return min;
 }
 
-console.log(max, min);
+const nums = [78, 56, 232, 12, 8];
+console.log(findMinNumber(nums));
 
-let findsmallesting2 = [78, 56, 232, 12, 18];
-
-let max2 = findsmallesting2[0];
-
-let min2 = findsmallesting2[0];
-
-for (let i = 0; i < findsmallesting2.length; i++) {
-    if (findsmallesting2[i] > max2) {
-        max2 = findsmallesting2
+function findMinNumber(params) {
+    if (params.length === 0) {
+        return null;
     }
-    else if (findsmallesting2[i] < min2) {
-        min2 = findsmallesting2[i]
+
+    let min = arr[0];
+
+    for (let i = 1; i < params.length; i++) {
+        if (params[i] < min) {
+            min = params[i];
+        }
     }
+
+    return min;
 }
 
-console.log(max2, min2);
+const nums2 = [78, 56, 232, 12, 18];
+console.log(findMinNumber(nums2));
 
-let findsmallesting3 = [78, 56, 232, 412, 228];
-
-let max3 = findsmallesting3[0];
-
-let min3 = findsmallesting3[0];
-
-for (let i = 0; i < findsmallesting3.length; i++) {
-    if (findsmallesting3[i] > max3) {
-        max3 = findsmallesting3
+function findMinNumber(params) {
+    if (params.length === 0) {
+        return null;
     }
-    else if (findsmallesting3[i] < min3) {
-        min3 = findsmallesting3[i]
+
+    let min = params[0];
+
+    for (let i = 1; i < params.length; i++) {
+        if (params[i] < min) {
+            min = params[i];
+        }
     }
+
+    return min;
 }
 
-console.log(max3, min3);
+const nums3 = [78, 56, 232, 412, 228];
+console.log(findMinNumber(nums3));
 
-let findsmallesting4 = [78, 56, 232, 12, 0];
-
-let max4 = findsmallesting4[0];
-
-let min4 = findsmallesting4[0];
-
-for (let i = 0; i < findsmallesting4.length; i++) {
-    if (findsmallesting4[i] > max4) {
-        max4 = findsmallesting4
+function findMinNumber(params) {
+    if (params.length === 0) {
+        return null;
     }
-    else if (findsmallesting4[i] < min4) {
-        min4 = findsmallesting4[i]
+
+    let min = params[0];
+
+    for (let i = 1; i < params.length; i++) {
+        if (params[i] < min) {
+            min = params[i];
+        }
     }
+
+    return min;
 }
 
-console.log(max4, min4);
+const nums4 = [78, 56, 232, 12, 0];
+console.log(findMinNumber(nums4));
 
-let findsmallesting5 = [1, 56, 232, 12, 8];
-
-let max5 = findsmallesting4[0];
-
-let min5 = findsmallesting4[0];
-
-for (let i = 0; i < findsmallesting5.length; i++) {
-    if (findsmallesting5[i] > max5) {
-        max5 = findsmallesting5
+function findMinNumber(params) {
+    if (params.length === 0) {
+        return null;
     }
-    else if (findsmallesting5[i] < min5) {
-        min5 = findsmallesting5[i]
+
+    let min = params[0];
+
+    for (let i = 1; i < params.length; i++) {
+        if (params[i] < min) {
+            min = params[i];
+        }
     }
+
+    return min;
 }
 
-console.log(max5, min5);
+const nums5 = [1, 56, 232, 12, 8];
+console.log(findMinNumber(nums5));
+
+// 7 masala
+
+function sumNumbers(...numbers) {
+    let sum = 0;
+
+    for (let num of numbers) {
+        sum += num;
+    }
+
+    return sum;
+}
+
+console.log(sumNumbers(0, -1));
+console.log(sumNumbers(0, 1));
+console.log(sumNumbers(2, 2));
+console.log(sumNumbers(-1, 2));
+
+// 9 masala
+
+function canFormTriangle(a, b, c) {
+    return (a + b > c) && (a + c > b) && (b + c > a);
+}
+
+const son1 = 1;
+const son2 = 2;
+const son3 = 2;
+
+if (canFormTriangle(son1, son2, son3)) {
+    console.log("true");
+} else {
+    console.log("false");
+}
+
+function canFormTriangle(a, b, c) {
+    return (a + b > c) && (a + c > b) && (b + c > a);
+}
+
+const son4 = 7;
+const son5 = 2;
+const son6 = 2;
+
+if (canFormTriangle(son4, son5, son6)) {
+    console.log("true");
+} else {
+    console.log("false");
+}
